@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello — Dan Ostrowski</title>
+  <meta name="description" content="I design the human side of complex systems. Fifteen years. Three domains. One question.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+
+  <style>
+    .hello-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: var(--space-20);
+      align-items: start;
+    }
+
+    .hello-photo {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      border-radius: var(--radius-md);
+      filter: grayscale(20%);
+    }
+
+    .hello-photo-placeholder {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: var(--bg-raised);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-tertiary);
+      font-size: var(--text-sm);
+    }
+
+    .hello-bio {
+      padding-top: var(--space-8);
+    }
+
+    .hello-bio h1 {
+      font-size: var(--text-3xl);
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      margin-bottom: var(--space-2);
+    }
+
+    .hello-bio__title {
+      font-size: var(--text-sm);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      margin-bottom: var(--space-10);
+    }
+
+    .hello-bio__lead {
+      font-size: var(--text-xl);
+      color: var(--text-primary);
+      font-weight: 300;
+      line-height: 1.5;
+      margin-bottom: var(--space-6);
+    }
+
+    .hello-bio__body {
+      font-size: var(--text-base);
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: var(--space-6);
+    }
+
+    .hello-bio__tagline {
+      font-size: var(--text-sm);
+      color: var(--text-tertiary);
+      font-style: italic;
+      margin-bottom: var(--space-10);
+    }
+
+    .hello-links {
+      display: flex;
+      gap: var(--space-4);
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 768px) {
+      .hello-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+      }
+
+      .hello-photo,
+      .hello-photo-placeholder {
+        aspect-ratio: 4/3;
+        max-height: 360px;
+        width: 100%;
+      }
+
+      .hello-bio {
+        padding-top: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav__logo">Dan Ostrowski</a>
+    <ul class="nav__links" role="list">
+      <li><a href="/hello/" class="nav__link nav__link--active">Hello</a></li>
+      <li><a href="/work/" class="nav__link">Work</a></li>
+    </ul>
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav__overlay" role="dialog" aria-modal="true">
+    <a href="/hello/" class="nav__link">Hello</a>
+    <a href="/work/" class="nav__link">Work</a>
+  </div>
+
+  <main>
+    <div class="container" style="padding-top: calc(var(--space-32) + var(--space-8)); padding-bottom: var(--space-24);">
+
+      <!-- ── Bio + Photo ─────────────────────────────────────── -->
+      <div class="hello-grid">
+
+        <div>
+          <img
+            src="/assets/images/dan-ostrowski.jpg"
+            alt="Dan Ostrowski"
+            class="hello-photo"
+            onerror="this.outerHTML='<div class=\'hello-photo-placeholder\'>Photo</div>'"
+          >
+        </div>
+
+        <div class="hello-bio">
+          <h1>Dan Ostrowski</h1>
+          <p class="hello-bio__title">UX Leader · Strategist · Innovator · Seattle, WA</p>
+
+          <p class="hello-bio__lead">
+            I design the human side of complex systems — from Boeing flight decks to Google AI agents.
+          </p>
+
+          <p class="hello-bio__body">
+            Fifteen years. Three domains. One question that has never changed: when the system fails, can the human take back control?
+          </p>
+
+          <p class="hello-bio__body">
+            I've applied that question to flight deck automation at Boeing, wearable input paradigms at Microsoft, EMS training platforms at Katalyst, AI literacy at Google, and autonomous agent deployment in developer tooling. The domain shifts. The design challenge doesn't.
+          </p>
+
+          <p class="hello-bio__body">
+            Currently at Google, leading design across AI-integrated developer platforms — from prompt literacy tools used across the organization, to autonomous agent systems deployed in production engineering workflows.
+          </p>
+
+          <p class="hello-bio__tagline">
+            "In rock and roll, there are those who play every note they know, and those like Mick Taylor who stop at nothing short of perfection."
+          </p>
+
+          <div class="hello-links">
+            <a href="https://www.linkedin.com/in/danostrowski" class="btn btn--ghost" target="_blank" rel="noopener">LinkedIn →</a>
+            <a href="/work/" class="btn btn--primary">View Work →</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- ── Quote ──────────────────────────────────────────── -->
+      <div class="quote-block" style="max-width: var(--content-width);">
+        <p class="quote-block__text">
+          "Dan has an uncanny ability to take incredibly complex problems and distill them into experiences that feel simple and inevitable. He's the rare designer who makes you feel like the answer was obvious all along."
+        </p>
+        <p class="quote-block__author">— Devlin Bentley</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- ── Timeline ───────────────────────────────────────── -->
+      <div style="max-width: var(--content-width);">
+        <p class="label" style="margin-bottom: var(--space-8);">Experience</p>
+
+        <div class="timeline">
+
+          <div class="timeline__item">
+            <p class="timeline__date">Feb 2026–Present</p>
+            <div class="timeline__content">
+              <p class="timeline__role">UX Lead — Mendel Traffic</p>
+              <p class="timeline__org">Google · CoreUX · AI-Powered Developer Tools</p>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <p class="timeline__date">Nov 2025–Jan 2026</p>
+            <div class="timeline__content">
+              <p class="timeline__role">Sole Designer — Prompt City</p>
+              <p class="timeline__org">Google · CoreUX · AI-Powered Developer Tools</p>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <p class="timeline__date">Jun 2025–Present</p>
+            <div class="timeline__content">
+              <p class="timeline__role">UX Strategy Lead — LemonADE</p>
+              <p class="timeline__org">Google · CoreUX · AI-Powered Developer Tools</p>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <p class="timeline__date">Oct 2024–Jun 2025</p>
+            <div class="timeline__content">
+              <p class="timeline__role">Design & Research Lead — Gemini TL</p>
+              <p class="timeline__org">Google · Core Engineering</p>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <p class="timeline__date">Mar 2018–Jun 2025</p>
+            <div class="timeline__content">
+              <p class="timeline__role">Senior UX Designer</p>
+              <p class="timeline__org">Google · EngEDU — EdKit, Corvus, PAIR Guidebook, AI Ethics Training</p>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <p class="timeline__date">Mar 2022–Sep 2023</p>
+            <div class="timeline__content">
+              <p class="timeline__role">UX Designer — Motus</p>
+              <p class="timeline__org">Google · 20% Project</p>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <p class="timeline__date">Jun 2016–Sep 2017</p>
+            <div class="timeline__content">
+              <p class="timeline__role">Experience Director</p>
+              <p class="timeline__org">Katalyst Fitness</p>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <p class="timeline__date">Nov 2012–Jun 2016</p>
+            <div class="timeline__content">
+              <p class="timeline__role">Design Lead — Microsoft Band & Health</p>
+              <p class="timeline__org">Microsoft</p>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <p class="timeline__date">2011–2012</p>
+            <div class="timeline__content">
+              <p class="timeline__role">Visiting Lecturer · Interaction Design</p>
+              <p class="timeline__org">University of Washington</p>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <p class="timeline__date">2009–2012</p>
+            <div class="timeline__content">
+              <p class="timeline__role">Lead Interaction Designer & Researcher · Boeing</p>
+              <p class="timeline__org">University of Washington / Boeing FDCC</p>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <p class="timeline__date">Prior</p>
+            <div class="timeline__content">
+              <p class="timeline__role">Industrial Designer</p>
+              <p class="timeline__org">Henry Dreyfuss Associates · 2011 John Deere tractor line</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- ── Education ──────────────────────────────────────── -->
+      <div style="max-width: var(--content-width);">
+        <p class="label" style="margin-bottom: var(--space-8);">Education</p>
+        <div class="timeline">
+          <div class="timeline__item">
+            <p class="timeline__date">Master's</p>
+            <div class="timeline__content">
+              <p class="timeline__role">Master of Interaction Design</p>
+              <p class="timeline__org">University of Washington</p>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <p class="timeline__date">Bachelor's</p>
+            <div class="timeline__content">
+              <p class="timeline__role">Bachelor of Science · Industrial Design</p>
+              <p class="timeline__org">The Ohio State University</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <p class="footer__name">Dan Ostrowski</p>
+          <p class="footer__title">UX Leader · Strategist · Innovator</p>
+          <p class="footer__location">Seattle, WA</p>
+        </div>
+        <nav class="footer__links" aria-label="Footer navigation">
+          <a href="https://www.linkedin.com/in/danostrowski" class="footer__link" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:dan@danostrowski.com" class="footer__link">Email</a>
+        </nav>
+        <p class="footer__copy">© 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/nav.js"></script>
+
+</body>
+</html>

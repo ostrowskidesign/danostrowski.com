@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work — Dan Ostrowski</title>
+  <meta name="description" content="Fifteen years of design across physical systems, knowledge systems, and AI systems.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+</head>
+
+<body>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav__logo">Dan Ostrowski</a>
+    <ul class="nav__links" role="list">
+      <li><a href="/hello/" class="nav__link">Hello</a></li>
+      <li><a href="/work/" class="nav__link nav__link--active">Work</a></li>
+    </ul>
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav__overlay" role="dialog" aria-modal="true">
+    <a href="/hello/" class="nav__link">Hello</a>
+    <a href="/work/" class="nav__link">Work</a>
+  </div>
+
+  <main>
+    <div class="container section--lg" style="padding-top: calc(var(--space-32) + var(--space-8));">
+
+      <!-- Page header -->
+      <div style="margin-bottom: var(--space-20);">
+        <h1 style="font-size: var(--text-3xl); font-weight: 300; letter-spacing: -0.02em; margin-bottom: var(--space-4);">Work</h1>
+        <p style="font-size: var(--text-lg); color: var(--text-secondary); max-width: 560px; line-height: 1.6;">
+          Fifteen years across three domains. Each project asks the same question in a different register.
+        </p>
+      </div>
+
+      <!-- ── ACT 3: AI Systems ──────────────────────────────── -->
+      <div class="chapter" id="act3">
+        <header class="chapter__header">
+          <span class="chapter__number act3-color">03</span>
+          <h2 class="chapter__title">AI Systems</h2>
+          <span class="chapter__dates">2025 – Present</span>
+        </header>
+
+        <div class="grid-auto--wide">
+
+          <!-- LemonADE -->
+          <a href="/cases/lemonade/" class="card">
+            <div class="card__image-wrap">
+              <img class="card__image" src="/assets/images/lemonade/hero.jpg"
+                   alt="LemonADE SDLC agent map" loading="lazy"
+                   onerror="this.parentElement.innerHTML='<div class=\'card__image-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/></svg></div>'">
+            </div>
+            <div class="card__body">
+              <div class="card__meta">
+                <span class="card__role-year">UX Strategy Lead · Jun 2025–Present</span>
+                <span class="act-tag act-tag--3">Act 3</span>
+              </div>
+              <h3 class="card__title">LemonADE</h3>
+              <p class="card__description">15+ AI agents automating technical documentation across the full SDLC. The harder design problem wasn't the automation — it was the interaction model.</p>
+            </div>
+          </a>
+
+          <!-- Prompt City — locked -->
+          <a href="/cases/prompt-city/" class="card">
+            <div class="card__image-wrap">
+              <div class="card__image-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8M8 8h8M8 16h4"/></svg>
+              </div>
+              <div class="card__lock-overlay">
+                <svg class="card__lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="5" y="11" width="14" height="11" rx="2"/>
+                  <path d="M8 11V7a4 4 0 018 0v4"/>
+                </svg>
+                <span class="card__lock-label">Password Required</span>
+              </div>
+            </div>
+            <div class="card__body">
+              <div class="card__meta">
+                <span class="card__role-year">Sole Designer · Nov 2025–Jan 2026</span>
+                <span class="act-tag act-tag--locked">Locked</span>
+              </div>
+              <h3 class="card__title">Prompt City</h3>
+              <p class="card__description">Google-wide prompt literacy platform. Real-time Attribute Tuners, semantic component system, Prompt Strength Score. Full visual design system in one month.</p>
+            </div>
+          </a>
+
+          <!-- Mendel Traffic — locked/active -->
+          <a href="/cases/mendel/" class="card">
+            <div class="card__image-wrap">
+              <div class="card__image-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="4"/></svg>
+              </div>
+              <div class="card__lock-overlay">
+                <svg class="card__lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="5" y="11" width="14" height="11" rx="2"/>
+                  <path d="M8 11V7a4 4 0 018 0v4"/>
+                </svg>
+                <span class="card__lock-label">Active Project</span>
+              </div>
+            </div>
+            <div class="card__body">
+              <div class="card__meta">
+                <span class="card__role-year">UX Lead · Feb 2026–Present</span>
+                <span class="act-tag act-tag--active">Active</span>
+              </div>
+              <h3 class="card__title">Mendel Traffic</h3>
+              <p class="card__description">Progressive AI autonomy in experiment authorship — from IDE-level feature recognition to agent-driven monitoring, scaled to individual trust.</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- ── ACT 2: Knowledge Systems ──────────────────────── -->
+      <div class="chapter" id="act2">
+        <header class="chapter__header">
+          <span class="chapter__number act2-color">02</span>
+          <h2 class="chapter__title">Knowledge Systems</h2>
+          <span class="chapter__dates">2018 – 2024</span>
+        </header>
+
+        <div class="grid-auto--wide">
+
+          <!-- Gemini TL — locked -->
+          <a href="/cases/gemini-tl/" class="card">
+            <div class="card__image-wrap">
+              <div class="card__image-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>
+              </div>
+              <div class="card__lock-overlay">
+                <svg class="card__lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="5" y="11" width="14" height="11" rx="2"/>
+                  <path d="M8 11V7a4 4 0 018 0v4"/>
+                </svg>
+                <span class="card__lock-label">Password Required</span>
+              </div>
+            </div>
+            <div class="card__body">
+              <div class="card__meta">
+                <span class="card__role-year">Design & Research Lead · Oct 2024–Jun 2025</span>
+                <span class="act-tag act-tag--locked">Locked</span>
+              </div>
+              <h3 class="card__title">Gemini TL</h3>
+              <p class="card__description">AI-mediated knowledge transfer for Core Engineering teams. The only project where the AI's primary job is improving human-to-human collaboration.</p>
+            </div>
+          </a>
+
+          <!-- EdKit -->
+          <a href="/cases/edkit/" class="card">
+            <div class="card__image-wrap">
+              <img class="card__image" src="/assets/images/edkit/hero.jpg"
+                   alt="EdKit activity creator" loading="lazy"
+                   onerror="this.parentElement.innerHTML='<div class=\'card__image-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/></svg></div>'">
+            </div>
+            <div class="card__body">
+              <div class="card__meta">
+                <span class="card__role-year">Co-Founder & UX Lead · 2019–2023</span>
+                <span class="act-tag act-tag--2">Act 2</span>
+              </div>
+              <h3 class="card__title">EdKit</h3>
+              <p class="card__description">A toolkit for building embeddable, interactive learning experiences at Google. Zero mandates. Hundreds of creators. Thousands of deployed instances.</p>
+            </div>
+          </a>
+
+          <!-- Motus -->
+          <a href="/cases/motus/" class="card">
+            <div class="card__image-wrap">
+              <img class="card__image" src="/assets/images/motus/hero.jpg"
+                   alt="Motus live class interface" loading="lazy"
+                   onerror="this.parentElement.innerHTML='<div class=\'card__image-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/></svg></div>'">
+            </div>
+            <div class="card__body">
+              <div class="card__meta">
+                <span class="card__role-year">UX Designer · Google 20% · 2022–2023</span>
+                <span class="act-tag act-tag--bridge">Bridge</span>
+              </div>
+              <h3 class="card__title">Motus</h3>
+              <p class="card__description">Redesigned a video hosting platform into an AI-powered fitness coaching experience. The first project where physical sensing and AI coaching converged.</p>
+            </div>
+          </a>
+
+          <!-- PAIR Guidebook -->
+          <a href="/cases/pair-guidebook/" class="card">
+            <div class="card__image-wrap">
+              <img class="card__image" src="/assets/images/pair/hero.jpg"
+                   alt="People + AI Guidebook" loading="lazy"
+                   onerror="this.parentElement.innerHTML='<div class=\'card__image-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/></svg></div>'">
+            </div>
+            <div class="card__body">
+              <div class="card__meta">
+                <span class="card__role-year">Contributor · 2019</span>
+                <span class="act-tag act-tag--2">Act 2</span>
+              </div>
+              <h3 class="card__title">People + AI Guidebook</h3>
+              <p class="card__description">Co-led the Errors & Failures section. Introduced Air France 447 as a UX case study for conflicting signal hierarchies in AI systems.</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- ── ACT 1: Physical Systems ────────────────────────── -->
+      <div class="chapter" id="act1">
+        <header class="chapter__header">
+          <span class="chapter__number act1-color">01</span>
+          <h2 class="chapter__title">Physical Systems</h2>
+          <span class="chapter__dates">2006 – 2017</span>
+        </header>
+
+        <div class="grid-auto--wide">
+
+          <!-- Katalyst -->
+          <a href="/cases/katalyst/" class="card">
+            <div class="card__image-wrap">
+              <img class="card__image" src="/assets/images/katalyst/hero.jpg"
+                   alt="Katalyst EMS training station" loading="lazy"
+                   onerror="this.parentElement.innerHTML='<div class=\'card__image-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/></svg></div>'">
+            </div>
+            <div class="card__body">
+              <div class="card__meta">
+                <span class="card__role-year">Experience Director · 2016–2017</span>
+                <span class="act-tag act-tag--bridge">Bridge</span>
+              </div>
+              <h3 class="card__title">Katalyst Fitness</h3>
+              <p class="card__description">A platform that could literally kill you if misused. Embedding expert intelligence into a connected EMS training system — FDA clearance included.</p>
+            </div>
+          </a>
+
+          <!-- Boeing -->
+          <a href="/cases/boeing/" class="card">
+            <div class="card__image-wrap">
+              <img class="card__image" src="/assets/images/boeing/hero.jpg"
+                   alt="Boeing cardboard flight deck prototype" loading="lazy"
+                   onerror="this.parentElement.innerHTML='<div class=\'card__image-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/></svg></div>'">
+            </div>
+            <div class="card__body">
+              <div class="card__meta">
+                <span class="card__role-year">Lead Interaction Designer · 2009–2012</span>
+                <span class="act-tag act-tag--1">Act 1</span>
+              </div>
+              <h3 class="card__title">Boeing — Future Flight Deck</h3>
+              <p class="card__description">The origin of a design philosophy. Cardboard prototypes, stop-motion testing, right engine fire scenarios. Automation is the easy part.</p>
+            </div>
+          </a>
+
+          <!-- Band 1 -->
+          <a href="/cases/band-1/" class="card">
+            <div class="card__image-wrap">
+              <img class="card__image" src="/assets/images/band/hero-1.jpg"
+                   alt="Microsoft Band 1 design" loading="lazy"
+                   onerror="this.parentElement.innerHTML='<div class=\'card__image-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/></svg></div>'">
+            </div>
+            <div class="card__body">
+              <div class="card__meta">
+                <span class="card__role-year">First Designer · 2012–2014</span>
+                <span class="act-tag act-tag--1">Act 1</span>
+              </div>
+              <h3 class="card__title">Microsoft Band 1</h3>
+              <p class="card__description">A new theory of input, forced by constraint. Pattern recognition on tap location → probabilistic sentence inference → single-gesture approval.</p>
+            </div>
+          </a>
+
+          <!-- Band 2 -->
+          <a href="/cases/band-2/" class="card">
+            <div class="card__image-wrap">
+              <img class="card__image" src="/assets/images/band/hero-2.jpg"
+                   alt="Microsoft Band 2 design" loading="lazy"
+                   onerror="this.parentElement.innerHTML='<div class=\'card__image-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/></svg></div>'">
+            </div>
+            <div class="card__body">
+              <div class="card__meta">
+                <span class="card__role-year">Design Lead · 2014–2016</span>
+                <span class="act-tag act-tag--1">Act 1</span>
+              </div>
+              <h3 class="card__title">Microsoft Band 2</h3>
+              <p class="card__description">Taking the input paradigm we invented and making it robust at scale. Design decisions in one experience propagate across the entire product system.</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <p class="footer__name">Dan Ostrowski</p>
+          <p class="footer__title">UX Leader · Strategist · Innovator</p>
+          <p class="footer__location">Seattle, WA</p>
+        </div>
+        <nav class="footer__links" aria-label="Footer navigation">
+          <a href="https://www.linkedin.com/in/danostrowski" class="footer__link" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:dan@danostrowski.com" class="footer__link">Email</a>
+        </nav>
+        <p class="footer__copy">© 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/nav.js"></script>
+
+</body>
+</html>

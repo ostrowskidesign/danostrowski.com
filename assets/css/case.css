@@ -1,0 +1,97 @@
+/* ============================================================
+   CASE.CSS — Case study page styles
+   danostrowski.com
+   ============================================================ */
+
+.case-body {
+  padding-top: 0;
+}
+
+/* Full-bleed hero wrapper */
+.case-hero-wrap {
+  width: 100%;
+  max-height: 560px;
+  overflow: hidden;
+  margin-top: 60px; /* nav height */
+}
+
+.case-hero-wrap img {
+  width: 100%;
+  height: clamp(280px, 45vw, 560px);
+  object-fit: cover;
+  display: block;
+}
+
+.case-hero-wrap--placeholder {
+  background: var(--bg-raised);
+  height: clamp(280px, 45vw, 420px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.case-hero-wrap--placeholder svg {
+  width: 48px;
+  height: 48px;
+  color: var(--text-tertiary);
+  opacity: 0.3;
+}
+
+/* Case content wrapper */
+.case-content-wrap {
+  padding: var(--space-12) 0 var(--space-24);
+}
+
+/* Two-col layout for header */
+.case-layout {
+  display: grid;
+  grid-template-columns: 1fr var(--content-width);
+  gap: var(--space-16);
+  align-items: start;
+}
+
+.case-sidebar {
+  position: sticky;
+  top: calc(60px + var(--space-8));
+}
+
+.case-sidebar__item {
+  margin-bottom: var(--space-6);
+}
+
+.case-sidebar__label {
+  font-size: var(--text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: var(--space-1);
+}
+
+.case-sidebar__value {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+/* Single-column layout (default for most content) */
+.case-main {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .case-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .case-sidebar {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: var(--space-6) var(--space-8);
+    padding-bottom: var(--space-8);
+    border-bottom: 1px solid var(--border-subtle);
+    margin-bottom: var(--space-8);
+  }
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gemini TL — Dan Ostrowski</title>
+  <meta name="description" content="AI-mediated knowledge transfer for engineering teams. Password protected.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/case.css">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+</head>
+
+<body class="case-body">
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav__logo">Dan Ostrowski</a>
+    <ul class="nav__links" role="list">
+      <li><a href="/hello/" class="nav__link">Hello</a></li>
+      <li><a href="/work/" class="nav__link">Work</a></li>
+    </ul>
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav__overlay" role="dialog" aria-modal="true">
+    <a href="/hello/" class="nav__link">Hello</a>
+    <a href="/work/" class="nav__link">Work</a>
+  </div>
+
+  <!-- ── Password Gate ─────────────────────────────────────── -->
+  <div id="password-gate" class="password-gate">
+    <div class="password-gate__inner">
+
+      <svg class="password-gate__lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <rect x="5" y="11" width="14" height="11" rx="2"/>
+        <path d="M8 11V7a4 4 0 018 0v4"/>
+      </svg>
+
+      <h1 class="password-gate__title">Gemini TL</h1>
+      <p class="password-gate__subtitle">
+        AI-mediated knowledge transfer for Core Engineering teams.<br>
+        This case study is password protected.
+      </p>
+
+      <form id="password-form" class="password-gate__form" novalidate>
+        <input
+          id="password-input"
+          type="password"
+          class="password-gate__input"
+          placeholder="Enter password"
+          autocomplete="current-password"
+          autofocus
+        >
+        <button id="password-submit" type="submit" class="password-gate__submit">
+          View Case Study
+        </button>
+        <p id="password-error" class="password-gate__error" aria-live="polite"></p>
+      </form>
+
+      <p class="password-gate__request">
+        Don't have the password?
+        <a href="https://www.linkedin.com/in/danostrowski" target="_blank" rel="noopener">Request access via LinkedIn</a>
+      </p>
+
+    </div>
+  </div>
+
+  <!-- ── Protected Content ─────────────────────────────────── -->
+  <div id="case-content" hidden>
+
+    <div class="case-hero-wrap case-hero-wrap--placeholder">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+        <circle cx="12" cy="12" r="9"/>
+        <path d="M8 12h8M12 8v8"/>
+      </svg>
+    </div>
+
+    <main>
+      <div class="container case-content-wrap">
+        <div class="case-main">
+
+          <header class="case-header">
+            <div class="case-header__eyebrow">
+              <span class="act-tag act-tag--bridge">Bridge · Act 2 → Act 3</span>
+              <span class="label">Design & Research Lead</span>
+              <span class="label">Oct 2024 – Jun 2025</span>
+            </div>
+            <h1 class="case-header__title">Gemini TL</h1>
+            <p class="case-header__hook">
+              The only project in this portfolio where the AI's primary job is improving human-to-human collaboration — not replacing human judgment, but making it more accessible.
+            </p>
+          </header>
+
+          <div class="prose">
+
+            <p>
+              Engineering knowledge transfer at Google has a structural problem: the people with the answers are hard to find, harder to ask, and often unavailable when you need them. The cost of getting unblocked is social as much as technical.
+            </p>
+
+            <p>
+              Gemini TL was an AI tech lead assistant embedded in Google Chat, designed to reduce that friction at every stage — from helping an engineer formulate a better question, to surfacing the right expert, to facilitating the introduction with context and care.
+            </p>
+
+            <h2>Five Interaction Models</h2>
+
+            <p>
+              The system was designed around five distinct scenarios, each representing a different moment in the knowledge-transfer lifecycle:
+            </p>
+
+            <ul>
+              <li><strong>Technical Q&A with confidence calibration</strong> — adaptive clarification loops that improved answer quality before surfacing a response</li>
+              <li><strong>Right Question, Right Person (RQRP)</strong> — a structured question-formulation scaffold that prepared engineers to engage experts effectively, reducing the social cost of asking</li>
+              <li><strong>Proactive SME recommendation</strong> — on bug assignment, the system surfaced top 2–3 experts with match confidence scoring and justification</li>
+              <li><strong>AI-facilitated introductions</strong> — mediated connections with context, timing awareness, and drafted outreach</li>
+              <li><strong>Work packaging</strong> — on-demand assembly of engineering context (CLs, bugs) for knowledge sharing</li>
+            </ul>
+
+            <h2>Research & Validation</h2>
+
+            <p>
+              Conducted 12 one-hour UXR sessions with engineers across Core Engineering teams. Received extremely positive feedback across all tested flows. The RQRP model was the standout — engineers reported that the scaffolding process itself changed how they thought about their problem before they'd even reached the expert.
+            </p>
+
+            <blockquote>
+              Before you can get a good answer, you need to be able to ask a good question. The system taught engineers how to ask.
+            </blockquote>
+
+            <h2>Outcome</h2>
+
+            <p>
+              Following a team reorg, the project was deprioritized. The core interaction model — particularly the RQRP scaffold and the SME recommendation flow — was incorporated into a broader Google-wide rollout.
+            </p>
+
+            <h2>Narrative Position</h2>
+
+            <p>
+              Gemini TL sits at the exact hinge between Act 2 and Act 3 of this career. Act 2 was about designing knowledge systems — ways to embed expertise, share it, scaffold it, make it accessible. Act 3 is about AI systems — autonomous agents, decision delegation, human-in-the-loop design. Gemini TL was both simultaneously: an AI system designed to improve the human knowledge systems it was embedded in.
+            </p>
+
+          </div>
+
+          <a href="/cases/lemonade/" class="next-project">
+            <div>
+              <p class="next-project__label">Next</p>
+              <p class="next-project__title">LemonADE →</p>
+            </div>
+            <span class="next-project__arrow" aria-hidden="true">→</span>
+          </a>
+
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div>
+            <p class="footer__name">Dan Ostrowski</p>
+            <p class="footer__title">UX Leader · Strategist · Innovator</p>
+            <p class="footer__location">Seattle, WA</p>
+          </div>
+          <nav class="footer__links" aria-label="Footer navigation">
+            <a href="https://www.linkedin.com/in/danostrowski" class="footer__link" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="mailto:dan@danostrowski.com" class="footer__link">Email</a>
+          </nav>
+          <p class="footer__copy">© 2026</p>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- end case-content -->
+
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/password.js"></script>
+
+</body>
+</html>

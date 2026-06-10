@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dan Ostrowski — UX Leader & Strategist</title>
+  <meta name="description" content="I design the human side of complex systems — from Boeing flight decks to Google AI agents. Fifteen years. Three domains. One question.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dan Ostrowski — UX Leader & Strategist">
+  <meta property="og:description" content="I design the human side of complex systems — from Boeing flight decks to Google AI agents.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.danostrowski.com">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/home.css">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+</head>
+
+<body>
+
+  <!-- ── Navigation ────────────────────────────────────────── -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav__logo" aria-label="Dan Ostrowski — home">Dan Ostrowski</a>
+    <ul class="nav__links" role="list">
+      <li><a href="/hello/" class="nav__link">Hello</a></li>
+      <li><a href="/work/" class="nav__link">Work</a></li>
+    </ul>
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile overlay -->
+  <div class="nav__overlay" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <a href="/hello/" class="nav__link">Hello</a>
+    <a href="/work/" class="nav__link">Work</a>
+  </div>
+
+  <main>
+
+    <!-- ── Hero ──────────────────────────────────────────────── -->
+    <section class="hero" aria-label="Introduction">
+      <div class="hero__inner container">
+        <div class="hero__content">
+          <p class="hero__statement">
+            I design the human side<br>
+            of complex systems.
+          </p>
+          <p class="hero__context">
+            Fifteen years. Three domains.<br>
+            One question that hasn't changed.
+          </p>
+          <div class="hero__divider" aria-hidden="true"></div>
+          <p class="hero__question">
+            When the system fails,<br>
+            can the human take back control?
+          </p>
+          <a href="#work" class="hero__scroll" aria-label="Scroll to work">
+            <svg width="16" height="24" viewBox="0 0 16 24" fill="none" aria-hidden="true">
+              <path d="M8 4L8 20M8 20L2 14M8 20L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Three Acts ─────────────────────────────────────────── -->
+    <section class="section section--sm" id="acts" aria-labelledby="acts-heading">
+      <div class="container">
+        <p class="label" id="acts-heading" style="margin-bottom: var(--space-6);">Career Arc</p>
+        <div class="acts-band" role="list">
+
+          <a href="/work/#act1" class="acts-band__item" role="listitem">
+            <p class="acts-band__number act1-color">01</p>
+            <h2 class="acts-band__name">Physical<br>Systems</h2>
+            <span class="acts-band__dates">2006 – 2017</span>
+            <p class="acts-band__projects">
+              Boeing · Microsoft Band<br>
+              Katalyst Fitness · HDA
+            </p>
+          </a>
+
+          <a href="/work/#act2" class="acts-band__item" role="listitem">
+            <p class="acts-band__number act2-color">02</p>
+            <h2 class="acts-band__name">Knowledge<br>Systems</h2>
+            <span class="acts-band__dates">2018 – 2024</span>
+            <p class="acts-band__projects">
+              EdKit · PAIR Guidebook<br>
+              Motus · Gemini TL
+            </p>
+          </a>
+
+          <a href="/work/#act3" class="acts-band__item" role="listitem">
+            <p class="acts-band__number act3-color">03</p>
+            <h2 class="acts-band__name">AI<br>Systems</h2>
+            <span class="acts-band__dates">2025 – Present</span>
+            <p class="acts-band__projects">
+              LemonADE · Prompt City<br>
+              Mendel Traffic
+            </p>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Selected Work ──────────────────────────────────────── -->
+    <section class="section" id="work" aria-labelledby="work-heading">
+      <div class="container">
+        <div class="flex-between" style="margin-bottom: var(--space-10);">
+          <p class="label" id="work-heading">Selected Work</p>
+          <a href="/work/" class="btn btn--ghost">All Projects →</a>
+        </div>
+
+        <div class="grid-auto--wide">
+
+          <!-- LemonADE -->
+          <a href="/cases/lemonade/" class="card" aria-label="LemonADE case study">
+            <div class="card__image-wrap">
+              <img class="card__image" src="/assets/images/lemonade/hero.jpg"
+                   alt="LemonADE SDLC agent map" loading="lazy"
+                   onerror="this.parentElement.innerHTML='<div class=\'card__image-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/></svg></div>'">
+            </div>
+            <div class="card__body">
+              <div class="card__meta">
+                <span class="card__role-year">UX Strategy Lead · 2025–Present</span>
+                <span class="act-tag act-tag--3">Act 3</span>
+              </div>
+              <h3 class="card__title">LemonADE</h3>
+              <p class="card__description">15+ AI agents automating technical documentation across the full SDLC — closing the gap between deployed code and out-of-date docs.</p>
+            </div>
+          </a>
+
+          <!-- Mendel Traffic -->
+          <a href="/cases/mendel/" class="card" aria-label="Mendel Traffic case study">
+            <div class="card__image-wrap">
+              <div class="card__image-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12l2 2 4-4"/></svg>
+              </div>
+              <div class="card__lock-overlay">
+                <svg class="card__lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="5" y="11" width="14" height="11" rx="2"/>
+                  <path d="M8 11V7a4 4 0 018 0v4"/>
+                </svg>
+                <span class="card__lock-label">Active Project</span>
+              </div>
+            </div>
+            <div class="card__body">
+              <div class="card__meta">
+                <span class="card__role-year">UX Lead · Feb 2026–Present</span>
+                <span class="act-tag act-tag--active">Active</span>
+              </div>
+              <h3 class="card__title">Mendel Traffic</h3>
+              <p class="card__description">Progressive AI autonomy in experiment authorship — from IDE-level recognition to agent-driven monitoring, scaled to individual trust.</p>
+            </div>
+          </a>
+
+          <!-- EdKit -->
+          <a href="/cases/edkit/" class="card" aria-label="EdKit case study">
+            <div class="card__image-wrap">
+              <img class="card__image" src="/assets/images/edkit/hero.jpg"
+                   alt="EdKit activity creator interface" loading="lazy"
+                   onerror="this.parentElement.innerHTML='<div class=\'card__image-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/></svg></div>'">
+            </div>
+            <div class="card__body">
+              <div class="card__meta">
+                <span class="card__role-year">Co-Founder & UX Lead · 2019–2023</span>
+                <span class="act-tag act-tag--2">Act 2</span>
+              </div>
+              <h3 class="card__title">EdKit</h3>
+              <p class="card__description">A platform that democratized learning design at Google — zero mandates, hundreds of creators, thousands of deployed instances.</p>
+            </div>
+          </a>
+
+          <!-- Katalyst -->
+          <a href="/cases/katalyst/" class="card" aria-label="Katalyst Fitness case study">
+            <div class="card__image-wrap">
+              <img class="card__image" src="/assets/images/katalyst/hero.jpg"
+                   alt="Katalyst EMS training station interface" loading="lazy"
+                   onerror="this.parentElement.innerHTML='<div class=\'card__image-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/></svg></div>'">
+            </div>
+            <div class="card__body">
+              <div class="card__meta">
+                <span class="card__role-year">Experience Director · 2016–2017</span>
+                <span class="act-tag act-tag--bridge">Bridge</span>
+              </div>
+              <h3 class="card__title">Katalyst Fitness</h3>
+              <p class="card__description">A platform that could literally kill you if misused. Embedding trainer expertise into a connected EMS fitness system — FDA clearance process included.</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Design Principles ───────────────────────────────────── -->
+    <section class="section" aria-labelledby="principles-heading">
+      <div class="container">
+        <p class="label" id="principles-heading" style="margin-bottom: var(--space-8);">Design Philosophy</p>
+        <div class="grid-2" style="gap: var(--space-4);">
+
+          <div class="principle-card" style="color: var(--act1);">
+            <p class="principle-card__number">01</p>
+            <h3 class="principle-card__title">Automation is the easy part.</h3>
+            <p class="principle-card__body">Design for the moment it fails.</p>
+          </div>
+
+          <div class="principle-card" style="color: var(--act3);">
+            <p class="principle-card__number">02</p>
+            <h3 class="principle-card__title">Complexity doesn't need to be simplified — it needs to be inhabited.</h3>
+            <p class="principle-card__body">Embed expertise so anyone can navigate it with confidence.</p>
+          </div>
+
+          <div class="principle-card" style="color: var(--act2);">
+            <p class="principle-card__number">03</p>
+            <h3 class="principle-card__title">Literacy before autonomy.</h3>
+            <p class="principle-card__body">Understanding unlocks agency.</p>
+          </div>
+
+          <div class="principle-card" style="color: var(--bridge);">
+            <p class="principle-card__number">04</p>
+            <h3 class="principle-card__title">The friction point is the design opportunity.</h3>
+            <p class="principle-card__body">Find it.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <p class="footer__name">Dan Ostrowski</p>
+          <p class="footer__title">UX Leader · Strategist · Innovator</p>
+          <p class="footer__location">Seattle, WA</p>
+        </div>
+        <nav class="footer__links" aria-label="Footer navigation">
+          <a href="https://www.linkedin.com/in/danostrowski" class="footer__link" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:dan@danostrowski.com" class="footer__link">Email</a>
+        </nav>
+        <p class="footer__copy">© 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/assets/js/nav.js"></script>
+
+</body>
+</html>

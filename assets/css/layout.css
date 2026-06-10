@@ -1,0 +1,116 @@
+/* ============================================================
+   LAYOUT.CSS — Containers, grid, spacing systems
+   danostrowski.com
+   ============================================================ */
+
+/* ── Containers ─────────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.container--narrow {
+  max-width: var(--content-width);
+}
+
+.container--wide {
+  max-width: 1440px;
+}
+
+/* ── Section spacing ────────────────────────────────────────── */
+.section {
+  padding: var(--space-24) 0;
+}
+
+.section--sm {
+  padding: var(--space-12) 0;
+}
+
+.section--lg {
+  padding: var(--space-32) 0;
+}
+
+/* ── Grid systems ───────────────────────────────────────────── */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--card-gap);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--card-gap);
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--card-gap);
+}
+
+/* Auto-responsive grids */
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--card-gap);
+}
+
+.grid-auto--wide {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: var(--card-gap);
+}
+
+/* ── Flex utilities ─────────────────────────────────────────── */
+.flex { display: flex; }
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.flex-between { display: flex; align-items: center; justify-content: space-between; }
+.flex-col { display: flex; flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+.gap-2 { gap: var(--space-2); }
+.gap-4 { gap: var(--space-4); }
+.gap-6 { gap: var(--space-6); }
+.gap-8 { gap: var(--space-8); }
+
+/* ── Divider ────────────────────────────────────────────────── */
+.divider {
+  height: 1px;
+  background: var(--border-subtle);
+  margin: var(--space-16) 0;
+}
+
+.divider--short {
+  width: 60px;
+  background: var(--text-tertiary);
+  margin: var(--space-8) 0;
+}
+
+/* ── Responsive breakpoints ─────────────────────────────────── */
+/* Mobile: < 640px    */
+/* Tablet: 640–1024px */
+/* Desktop: > 1024px  */
+
+@media (max-width: 1024px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid-2,
+  .grid-3,
+  .grid-4,
+  .grid-auto,
+  .grid-auto--wide {
+    grid-template-columns: 1fr;
+  }
+
+  .section { padding: var(--space-16) 0; }
+  .section--lg { padding: var(--space-20) 0; }
+}
