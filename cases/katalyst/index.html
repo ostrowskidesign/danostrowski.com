@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalyst Fitness — Dan Ostrowski</title>
+  <meta name="description" content="A platform that could literally kill you if misused. Embedding trainer expertise into a connected EMS system — FDA clearance included.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/case.css">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+</head>
+
+<body class="case-body">
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav__logo">Dan Ostrowski</a>
+    <ul class="nav__links" role="list">
+      <li><a href="/hello/" class="nav__link">Hello</a></li>
+      <li><a href="/work/" class="nav__link">Work</a></li>
+    </ul>
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav__overlay" role="dialog" aria-modal="true">
+    <a href="/hello/" class="nav__link">Hello</a>
+    <a href="/work/" class="nav__link">Work</a>
+  </div>
+
+  <div class="case-hero-wrap">
+    <img
+      src="/assets/images/katalyst/hero.jpg"
+      alt="Katalyst EMS training station — active session interface"
+      onerror="this.parentElement.classList.add('case-hero-wrap--placeholder'); this.outerHTML='<svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/></svg>'"
+    >
+  </div>
+
+  <main>
+    <div class="container case-content-wrap">
+      <div class="case-main">
+
+        <header class="case-header">
+          <div class="case-header__eyebrow">
+            <span class="act-tag act-tag--bridge">Bridge · Act 1 → Act 2</span>
+            <span class="label">Experience Director</span>
+            <span class="label">Jun 2016 – Sep 2017</span>
+          </div>
+          <h1 class="case-header__title">Katalyst Fitness</h1>
+          <p class="case-header__hook">
+            A platform that could literally kill you if misused. The design question wasn't how to make it beautiful — it was how to make it safe, at the moment of maximum physiological intensity, operated by a trainer whose hands were already full.
+          </p>
+        </header>
+
+        <div class="prose">
+
+          <p>
+            Katalyst was a pre-seed EMS (Electrical Muscle Stimulation) fitness startup. EMS training uses electrical impulses to contract muscle groups — producing the muscular effect of a 90-minute workout in 20 minutes. The technology is well-established in European sports science and physical therapy. In the US market, it was new, poorly understood, and medically regulated.
+          </p>
+
+          <p>
+            I joined as Experience Director when the product existed primarily as hardware concepts and a business model. My mandate covered everything from the training station interface to the client booking platform to the FDA clearance documentation design.
+          </p>
+
+          <h2>The Design Problem</h2>
+
+          <p>
+            EMS at therapeutic intensities can cause rhabdomyolysis — the breakdown of muscle tissue — if misused. Trainers needed to manage two clients simultaneously, monitoring 11 muscle groups per client, adjusting stimulation levels in real time, while staying physically present and responsive in the studio. The interface had to be glanceable, controllable with one hand, and impossible to misread under stress.
+          </p>
+
+          <p>
+            At the same time, the platform had to be accessible to trainers with no technical background. The entire UX had to embed the expert knowledge — the safe operating parameters, the warning signs, the session protocols — directly into the system, so the trainer didn't need to hold it all in working memory while managing a live session.
+          </p>
+
+          <blockquote>
+            What if instead of designing a tool for an expert to use — I designed a system that embedded the expert's intelligence directly? The trainer didn't disappear. They became the system.
+          </blockquote>
+
+          <h2>The Station Interface</h2>
+
+          <p>
+            The training station interface managed two clients simultaneously. The design had to surface the right information at the right moment without demanding attention from a trainer who was physically coaching at the same time.
+          </p>
+
+          <p>
+            Key design decisions:
+          </p>
+
+          <ul>
+            <li><strong>Per-muscle-group controls</strong> — 11 dials per client, each mapped to an anatomical region, arranged to match the client's body orientation. A trainer could reach for a control without looking because the layout was spatially intuitive.</li>
+            <li><strong>Dual master levels</strong> — one global intensity control per client, for rapid session-wide adjustments when a client signaled distress.</li>
+            <li><strong>Session timing and safety controls</strong> — always visible, never hidden behind navigation. The pause and stop controls were the largest targets on the screen.</li>
+            <li><strong>Visual hierarchy by urgency</strong> — routine monitoring was quiet; anything requiring immediate trainer attention was visually elevated. The system escalated before the trainer needed to ask.</li>
+          </ul>
+
+          <h2>The Booking Platform</h2>
+
+          <p>
+            Katalyst offered 30-minute sessions, bookable every 15 minutes — 64 sessions per day per station. The booking platform had to handle a subscription model, session credits, intro session flows for new clients, and studio management for trainers — across desktop, tablet, and mobile.
+          </p>
+
+          <p>
+            We built two distinct surfaces: a client-facing booking flow and a trainer-facing studio management tool. The studio tool gave trainers a real-time view of the day's schedule, upcoming sessions, and client status — designed to be operated on a tablet mounted at the station, not a desktop.
+          </p>
+
+          <h2>FDA Clearance Process</h2>
+
+          <p>
+            EMS devices used for medical or therapeutic purposes require FDA clearance. The design work extended into the clearance process — documenting the intended use, the safety constraints built into the interface, and the training requirements for operators. This was interaction design applied to regulatory documentation: the same clarity of communication, the same information hierarchy, aimed at a different audience.
+          </p>
+
+          <p>
+            We cleared FDA in September 2017. The Katalyst studio opened on the same day I left the company.
+          </p>
+
+        </div>
+
+        <div class="image-grid">
+          <div class="image-grid__item">
+            <img src="/assets/images/katalyst/station-simple.jpg"
+                 alt="Katalyst training station — simple view"
+                 loading="lazy"
+                 onerror="this.parentElement.style.background='var(--bg-overlay)'">
+          </div>
+          <div class="image-grid__item">
+            <img src="/assets/images/katalyst/station-active.jpg"
+                 alt="Katalyst training station — active dual-client session"
+                 loading="lazy"
+                 onerror="this.parentElement.style.background='var(--bg-overlay)'">
+          </div>
+        </div>
+
+        <div class="prose">
+
+          <h2>Why This Was the Bridge</h2>
+
+          <p>
+            Katalyst was where Act 1 and Act 2 of this career met for the first time. Act 1 was physical systems — hardware constraints, sensor limitations, the body as interface. Act 2 was knowledge systems — how do you embed expertise, transfer knowledge, make complexity navigable?
+          </p>
+
+          <p>
+            At Katalyst, both were required simultaneously. The hardware constraint was electrical current running through a human body. The knowledge system was the accumulated expertise of EMS trainers distilled into an interface that a new trainer could operate safely on day one.
+          </p>
+
+          <p>
+            That question — how do you embed enough of the expert's intelligence into the system that it holds up without them — followed me directly into Google, where I spent the next seven years asking it about machine learning, about AI agents, and eventually about autonomous systems that operate in production code at scale.
+          </p>
+
+        </div>
+
+        <div class="image-grid">
+          <div class="image-grid__item">
+            <img src="/assets/images/katalyst/booking-1.jpg"
+                 alt="Katalyst booking platform — client session selection"
+                 loading="lazy"
+                 onerror="this.parentElement.style.background='var(--bg-overlay)'">
+          </div>
+          <div class="image-grid__item">
+            <img src="/assets/images/katalyst/booking-2.jpg"
+                 alt="Katalyst booking platform — studio management"
+                 loading="lazy"
+                 onerror="this.parentElement.style.background='var(--bg-overlay)'">
+          </div>
+        </div>
+
+        <a href="/cases/motus/" class="next-project">
+          <div>
+            <p class="next-project__label">Next</p>
+            <p class="next-project__title">Motus →</p>
+          </div>
+          <span class="next-project__arrow" aria-hidden="true">→</span>
+        </a>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <p class="footer__name">Dan Ostrowski</p>
+          <p class="footer__title">UX Leader · Strategist · Innovator</p>
+          <p class="footer__location">Seattle, WA</p>
+        </div>
+        <nav class="footer__links" aria-label="Footer navigation">
+          <a href="https://www.linkedin.com/in/danostrowski" class="footer__link" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:dan@danostrowski.com" class="footer__link">Email</a>
+        </nav>
+        <p class="footer__copy">© 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/nav.js"></script>
+
+</body>
+</html>

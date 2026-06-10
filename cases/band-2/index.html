@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microsoft Band 2 — Dan Ostrowski</title>
+  <meta name="description" content="Taking the input paradigm we invented and making it robust at scale. Design decisions made in one experience propagate across the entire system.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/case.css">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+</head>
+
+<body class="case-body">
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav__logo">Dan Ostrowski</a>
+    <ul class="nav__links" role="list">
+      <li><a href="/hello/" class="nav__link">Hello</a></li>
+      <li><a href="/work/" class="nav__link">Work</a></li>
+    </ul>
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav__overlay" role="dialog" aria-modal="true">
+    <a href="/hello/" class="nav__link">Hello</a>
+    <a href="/work/" class="nav__link">Work</a>
+  </div>
+
+  <div class="case-hero-wrap">
+    <img
+      src="/assets/images/band/hero-2.jpg"
+      alt="Microsoft Band 2 design"
+      onerror="this.parentElement.classList.add('case-hero-wrap--placeholder'); this.outerHTML='<svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/></svg>'"
+    >
+  </div>
+
+  <main>
+    <div class="container case-content-wrap">
+      <div class="case-main">
+
+        <header class="case-header">
+          <div class="case-header__eyebrow">
+            <span class="act-tag act-tag--1">Act 1 · Physical Systems</span>
+            <span class="label">Design Lead</span>
+            <span class="label">2014 – 2016</span>
+          </div>
+          <h1 class="case-header__title">Microsoft Band 2</h1>
+          <p class="case-header__hook">
+            Band 1 proved the paradigm. Band 2 was about making it robust — scaling the input system, leading a design team, and learning that a decision made in one corner of a product propagates everywhere.
+          </p>
+        </header>
+
+        <div class="prose">
+
+          <p>
+            By Band 2 I had grown from the first designer on a three-person incubation team to leading the design team for the full product. The hardware was more refined — a curved display, a more ergonomic form factor, better sensors. The design challenge shifted from invention to execution at scale.
+          </p>
+
+          <p>
+            The input paradigm from Band 1 carried forward. The task was making it reliable across a much broader user population, a wider range of use cases, and a more complex feature set — including new workout types, Cortana integration, and a significantly expanded notification system.
+          </p>
+
+          <h2>Design Leadership at Scale</h2>
+
+          <p>
+            Leading the Band 2 design team meant thinking about design decisions differently. On Band 1, a choice I made would show up in one place. On Band 2, a choice I made in one experience — say, the interaction model for pull-based controls in the golf experience — would propagate across the entire product system.
+          </p>
+
+          <p>
+            The golf experience is a good example. Golfers need to track shot distance, club selection, and course position — all while walking a fairway with their hands occupied. We designed a pull-based interaction where the user could access contextual data with a single wrist rotation and a thumb drag, without stopping or looking away. The gesture model we developed for this became the foundation for how the entire Band 2 navigation system worked.
+          </p>
+
+          <p>
+            That's a Director-level observation that I only understood by being in it: the micro-decisions you make in a single experience become the macro-architecture of the product. Getting a golf interaction right wasn't just about golf. It was about defining how a human navigates a wrist-worn computer.
+          </p>
+
+          <h2>The Health Ecosystem</h2>
+
+          <p>
+            Band 2 wasn't just the device — it was the center of a health platform that included iOS, Android, and Windows Phone apps, a web dashboard, and an SDK for third-party developers. I led design across all surfaces, ensuring the experience felt coherent whether you were checking your sleep data on a phone or reviewing your running history on a browser.
+          </p>
+
+          <p>
+            The design language we established — a dark, data-forward aesthetic with glanceable metrics at the top level and deeper drill-downs behind them — was informed by the constraints of the Band display and then carried into larger screens. The Band dictated the hierarchy because it had the tightest constraints.
+          </p>
+
+          <h2>External Validation</h2>
+
+          <p>
+            David Pogue, then at Yahoo Tech, called Band 2 "the most sophisticated fitness band yet." That mattered less to me than the internal signal: the design system we built held up at scale, across a team, across multiple surfaces, and across a product that had grown significantly from its incubation origins.
+          </p>
+
+          <blockquote>
+            Design decisions made in one experience propagate across the entire product system. Getting the micro-interaction right isn't just about the micro — it's about what it will become when it scales.
+          </blockquote>
+
+          <h2>What Came Next</h2>
+
+          <p>
+            Microsoft Band was discontinued in 2016. The Health Incubation team moved into exploring concept experiences for the medical patient space — work that anticipated by several years the convergence of consumer wearables and clinical care. That work informed what I brought to Katalyst the following year: the question of how physical sensing systems should behave when the stakes are higher than step counts.
+          </p>
+
+        </div>
+
+        <div class="image-grid">
+          <div class="image-grid__item">
+            <img src="/assets/images/band/band2-1.jpg"
+                 alt="Microsoft Band 2 — device and health platform"
+                 loading="lazy"
+                 onerror="this.parentElement.style.background='var(--bg-overlay)'">
+          </div>
+          <div class="image-grid__item">
+            <img src="/assets/images/band/band2-2.jpg"
+                 alt="Microsoft Band 2 — health dashboard"
+                 loading="lazy"
+                 onerror="this.parentElement.style.background='var(--bg-overlay)'">
+          </div>
+        </div>
+
+        <a href="/cases/katalyst/" class="next-project">
+          <div>
+            <p class="next-project__label">Next</p>
+            <p class="next-project__title">Katalyst Fitness →</p>
+          </div>
+          <span class="next-project__arrow" aria-hidden="true">→</span>
+        </a>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <p class="footer__name">Dan Ostrowski</p>
+          <p class="footer__title">UX Leader · Strategist · Innovator</p>
+          <p class="footer__location">Seattle, WA</p>
+        </div>
+        <nav class="footer__links" aria-label="Footer navigation">
+          <a href="https://www.linkedin.com/in/danostrowski" class="footer__link" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:dan@danostrowski.com" class="footer__link">Email</a>
+        </nav>
+        <p class="footer__copy">© 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/nav.js"></script>
+
+</body>
+</html>

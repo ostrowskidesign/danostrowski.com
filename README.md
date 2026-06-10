@@ -29,7 +29,7 @@ Push to `main` — GitHub Actions deploys automatically via `.github/workflows/d
 
 ## Domain Setup (GoDaddy)
 
-1. Add CNAME: `www` → `danostrowski.github.io`
+1. Add CNAME: `www` → `ostrowskidesign.github.io`
 2. Add A records for apex domain:
    ```
    185.199.108.153

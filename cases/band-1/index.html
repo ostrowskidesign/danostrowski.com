@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microsoft Band 1 — Dan Ostrowski</title>
+  <meta name="description" content="A new theory of input, forced by constraint. Pattern recognition on tap location, probabilistic sentence inference, single-gesture approval.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/case.css">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+</head>
+
+<body class="case-body">
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav__logo">Dan Ostrowski</a>
+    <ul class="nav__links" role="list">
+      <li><a href="/hello/" class="nav__link">Hello</a></li>
+      <li><a href="/work/" class="nav__link">Work</a></li>
+    </ul>
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav__overlay" role="dialog" aria-modal="true">
+    <a href="/hello/" class="nav__link">Hello</a>
+    <a href="/work/" class="nav__link">Work</a>
+  </div>
+
+  <div class="case-hero-wrap">
+    <img
+      src="/assets/images/band/hero-1.jpg"
+      alt="Microsoft Band 1 — Health App V1 and V2"
+      onerror="this.parentElement.classList.add('case-hero-wrap--placeholder'); this.outerHTML='<svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/></svg>'"
+    >
+  </div>
+
+  <main>
+    <div class="container case-content-wrap">
+      <div class="case-main">
+
+        <header class="case-header">
+          <div class="case-header__eyebrow">
+            <span class="act-tag act-tag--1">Act 1 · Physical Systems</span>
+            <span class="label">First Designer → Design Lead</span>
+            <span class="label">2012 – 2014</span>
+          </div>
+          <h1 class="case-header__title">Microsoft Band 1</h1>
+          <p class="case-header__hook">
+            Device constraints eliminated conventional input entirely. What we built instead was a new theory of how humans communicate with machines under extreme physical restriction.
+          </p>
+        </header>
+
+        <div class="prose">
+
+          <p>
+            I joined Microsoft as the first designer on a three-person incubation team. The brief was open-ended: design the experience for a wearable computing platform. The constraint was not: a touch surface roughly the size of a stick of gum, with two to four active sensors per row, on a device worn on the wrist during physical activity.
+          </p>
+
+          <p>
+            Conventional input was impossible. A QWERTY keyboard at that scale was physically unusable. Predictive text required a gesture vocabulary the device couldn't support. We had to invent something new.
+          </p>
+
+          <h2>The Constraint as Design Brief</h2>
+
+          <p>
+            The Band's touch surface measured approximately 11×33mm — smaller than a postage stamp. We had capacitive sensors arranged in a 2×4 grid, enough to detect tap location but not enough to resolve individual characters. The compute budget was tight. The battery was tighter.
+          </p>
+
+          <p>
+            Most teams would have scoped the product down: no text input, no messaging, notifications only. We asked a different question: what if we designed a completely new input paradigm that worked within the constraint rather than around it?
+          </p>
+
+          <h2>The Input Paradigm</h2>
+
+          <p>
+            Working with Microsoft Research, we developed a system we called Wordflow. The core insight: on a tiny touch surface, the location of a tap is more information-rich than the tap itself. If you know where someone's thumb lands — even imprecisely — you can apply pattern recognition to infer what they were trying to type.
+          </p>
+
+          <p>
+            The system worked in three stages:
+          </p>
+
+          <ul>
+            <li><strong>Pattern recognition on tap location</strong> — each tap registered a position on the 2×4 grid, not a character. The system analyzed sequences of positions against a language model.</li>
+            <li><strong>Probabilistic sentence inference</strong> — rather than showing individual character candidates, the system surfaced complete word and sentence candidates ranked by likelihood. The language model did the disambiguation work that the hardware couldn't.</li>
+            <li><strong>Single-gesture approval</strong> — the user confirmed a candidate with a single swipe. If the top candidate was wrong, a scroll revealed alternatives. The interaction took seconds rather than the minutes a character-by-character approach would have required.</li>
+          </ul>
+
+          <p>
+            This wasn't a smaller keyboard. It was a fundamentally different theory of input — one that treated the hardware limitation as a design constraint that forced a better solution.
+          </p>
+
+          <h2>The Broader Experience</h2>
+
+          <p>
+            The keyboard was one piece of a larger system we designed from scratch. The Band was Microsoft's first serious wearable, and we were defining what a wearable experience could be before the category had established conventions.
+          </p>
+
+          <p>
+            We developed a haptic language — distinct patterns for notifications, alerts, and coaching cues — that communicated meaning without requiring the user to look at the screen. We designed tile-based navigation that could be operated with a single thumb while running. We built a coaching framework drawing on BJ Fogg's behavior design principles, using the device's continuous sensor stream to time nudges at moments of maximum receptivity.
+          </p>
+
+          <p>
+            The UX work was done in constant collaboration with hardware engineers and firmware developers. When the compute budget changed, interaction patterns changed with it. When a sensor proved unreliable in cold weather, we redesigned the interactions that depended on it. Design and engineering were not sequential here — they were simultaneous.
+          </p>
+
+        </div>
+
+        <div class="image-grid">
+          <div class="image-grid__item">
+            <img src="/assets/images/band/screen-1.jpg"
+                 alt="Microsoft Band health dashboard — V1"
+                 loading="lazy"
+                 onerror="this.parentElement.style.background='var(--bg-overlay)'">
+          </div>
+          <div class="image-grid__item">
+            <img src="/assets/images/band/screen-2.jpg"
+                 alt="Microsoft Band health dashboard — V2"
+                 loading="lazy"
+                 onerror="this.parentElement.style.background='var(--bg-overlay)'">
+          </div>
+        </div>
+
+        <div class="prose">
+
+          <h2>What This Taught Me</h2>
+
+          <blockquote>
+            Extreme constraint forces extreme clarity about what actually matters. When you can't do everything, you discover what's essential.
+          </blockquote>
+
+          <p>
+            The Band taught me that the friction point is the design opportunity. Every time we hit a hardware wall, we had to ask: is this a constraint we work around, or a constraint we design through? The Wordflow keyboard came from choosing the second option.
+          </p>
+
+          <p>
+            It also taught me something about the relationship between hardware and interaction design. The best interactions we shipped weren't designed on top of the hardware — they were designed from inside its constraints. Understanding what the sensors could and couldn't do, what the compute budget allowed and didn't allow, was not a limitation on creativity. It was the source of it.
+          </p>
+
+          <p>
+            Band 1 shipped in October 2014. It sold out on the first day.
+          </p>
+
+        </div>
+
+        <a href="/cases/band-2/" class="next-project">
+          <div>
+            <p class="next-project__label">Next</p>
+            <p class="next-project__title">Microsoft Band 2 →</p>
+          </div>
+          <span class="next-project__arrow" aria-hidden="true">→</span>
+        </a>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <p class="footer__name">Dan Ostrowski</p>
+          <p class="footer__title">UX Leader · Strategist · Innovator</p>
+          <p class="footer__location">Seattle, WA</p>
+        </div>
+        <nav class="footer__links" aria-label="Footer navigation">
+          <a href="https://www.linkedin.com/in/danostrowski" class="footer__link" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:dan@danostrowski.com" class="footer__link">Email</a>
+        </nav>
+        <p class="footer__copy">© 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/nav.js"></script>
+
+</body>
+</html>
