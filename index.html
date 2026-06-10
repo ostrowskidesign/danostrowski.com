@@ -126,17 +126,24 @@
 
         <div class="grid-auto--wide">
 
-          <!-- LemonADE -->
+          <!-- LemonADE — locked -->
           <a href="/cases/lemonade/" class="card" aria-label="LemonADE case study">
             <div class="card__image-wrap">
               <img class="card__image" src="/assets/images/lemonade/hero.jpg"
                    alt="LemonADE SDLC agent map" loading="lazy"
                    onerror="this.parentElement.innerHTML='<div class=\'card__image-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/></svg></div>'">
+              <div class="card__lock-overlay">
+                <svg class="card__lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="5" y="11" width="14" height="11" rx="2"/>
+                  <path d="M8 11V7a4 4 0 018 0v4"/>
+                </svg>
+                <span class="card__lock-label">Password Required</span>
+              </div>
             </div>
             <div class="card__body">
               <div class="card__meta">
                 <span class="card__role-year">UX Strategy Lead · 2025–Present</span>
-                <span class="act-tag act-tag--3">Act 3</span>
+                <span class="act-tag act-tag--locked">Locked</span>
               </div>
               <h3 class="card__title">LemonADE</h3>
               <p class="card__description">15+ AI agents automating technical documentation across the full SDLC — closing the gap between deployed code and out-of-date docs.</p>

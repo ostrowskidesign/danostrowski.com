@@ -36,6 +36,42 @@
     <a href="/work/" class="nav__link">Work</a>
   </div>
 
+  <!-- ── Password Gate ─────────────────────────────────────── -->
+  <div id="password-gate" class="password-gate">
+    <div class="password-gate__inner">
+      <svg class="password-gate__lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <rect x="5" y="11" width="14" height="11" rx="2"/>
+        <path d="M8 11V7a4 4 0 018 0v4"/>
+      </svg>
+      <h1 class="password-gate__title">LemonADE</h1>
+      <p class="password-gate__subtitle">
+        AI agent system for technical documentation.<br>
+        This case study is password protected.
+      </p>
+      <form id="password-form" class="password-gate__form" novalidate>
+        <input
+          id="password-input"
+          type="password"
+          class="password-gate__input"
+          placeholder="Enter password"
+          autocomplete="current-password"
+          autofocus
+        >
+        <button id="password-submit" type="submit" class="password-gate__submit">
+          View Case Study
+        </button>
+        <p id="password-error" class="password-gate__error" aria-live="polite"></p>
+      </form>
+      <p class="password-gate__request">
+        Don't have the password?
+        <a href="https://www.linkedin.com/in/danostrowski" target="_blank" rel="noopener">Request access via LinkedIn</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- ── Protected Content ─────────────────────────────────── -->
+  <div id="case-content" hidden>
+
   <div class="case-hero-wrap">
     <img
       src="/assets/images/lemonade/hero.jpg"
@@ -133,6 +169,14 @@
 
         </div>
 
+        <div class="image-grid image-grid--single">
+          <div class="image-grid__item" style="aspect-ratio:16/9;">
+            <img src="/assets/images/lemonade/hero.jpg"
+                 alt="LemonADE — AI assistance across the software development lifecycle"
+                 loading="lazy"
+                 onerror="this.parentElement.style.background='var(--bg-overlay)'">
+          </div>
+        </div>
         <div class="image-grid">
           <div class="image-grid__item">
             <img src="/assets/images/lemonade/cider.jpg"
@@ -173,7 +217,7 @@
             <p class="next-project__label">Next</p>
             <p class="next-project__title">Prompt City →</p>
           </div>
-          <span class="next-project__arrow" aria-hidden="true">→</span>
+          
         </a>
 
       </div>
@@ -197,7 +241,10 @@
     </div>
   </footer>
 
+  </div><!-- end case-content -->
+
   <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/password.js"></script>
 
 </body>
 </html>
