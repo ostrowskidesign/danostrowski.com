@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LemonADE — Dan Ostrowski</title>
+  <meta name="description" content="15+ AI agents automating technical documentation across the full SDLC. The harder design problem wasn't the automation — it was the interaction model.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/case.css">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+</head>
+
+<body class="case-body">
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav__logo">Dan Ostrowski</a>
+    <ul class="nav__links" role="list">
+      <li><a href="/hello/" class="nav__link">Hello</a></li>
+      <li><a href="/work/" class="nav__link">Work</a></li>
+    </ul>
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav__overlay" role="dialog" aria-modal="true">
+    <a href="/hello/" class="nav__link">Hello</a>
+    <a href="/work/" class="nav__link">Work</a>
+  </div>
+
+  <div class="case-hero-wrap">
+    <img
+      src="/assets/images/lemonade/hero.jpg"
+      alt="LemonADE — AI assistance across the software development lifecycle"
+      onerror="this.parentElement.classList.add('case-hero-wrap--placeholder'); this.outerHTML='<svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/></svg>'"
+    >
+  </div>
+
+  <main>
+    <div class="container case-content-wrap">
+      <div class="case-main">
+
+        <header class="case-header">
+          <div class="case-header__eyebrow">
+            <span class="act-tag act-tag--3">Act 3 · AI Systems</span>
+            <span class="label">UX Strategy Lead</span>
+            <span class="label">Jun 2025 – Present</span>
+          </div>
+          <h1 class="case-header__title">LemonADE</h1>
+          <p class="case-header__hook">
+            Documentation was Google's largest source of technical debt — always written by humans, always lagging behind deployed code. LemonADE deployed 15+ AI agents to close that gap. The harder design problem wasn't the automation. It was the interaction model.
+          </p>
+        </header>
+
+        <div class="prose">
+
+          <p>
+            Technical documentation has a structural problem. It's written by humans at a moment in time, but code is a living system. Every deploy, every refactor, every API change creates a gap between what the documentation says and what the system does. At Google's scale — millions of lines of code, thousands of engineers — that gap is not a nuisance. It's a major source of engineering friction, onboarding failure, and production incidents.
+          </p>
+
+          <p>
+            LemonADE was a suite of AI agents designed to eliminate that gap by automating the creation, maintenance, and discovery of technical documentation across the full software development lifecycle.
+          </p>
+
+          <h2>The System</h2>
+
+          <p>
+            The project deployed 15+ specialized agents, each responsible for a specific documentation task at a specific point in the SDLC:
+          </p>
+
+          <ul>
+            <li><strong>Inception & Planning</strong> — agents that generated project briefs, design docs, and API contracts from code and requirements</li>
+            <li><strong>Development</strong> — inline documentation agents, code comment generators, and change log writers operating inside the Cider IDE</li>
+            <li><strong>Testing</strong> — agents that maintained test documentation and coverage reports in sync with the test suite</li>
+            <li><strong>Release & Deployment</strong> — release note generators, migration guides, and deprecation notices triggered by deployment events</li>
+            <li><strong>Monitoring & Maintenance</strong> — agents that detected documentation drift, flagged stale content, and proposed updates when the underlying code changed</li>
+          </ul>
+
+          <p>
+            I owned the horizontal UX strategy across all agents — the interaction model that unified them into a coherent experience rather than 15 separate tools.
+          </p>
+
+          <h2>The Real Design Problem</h2>
+
+          <p>
+            The automation was solvable. The engineering team could generate documentation. The harder question was: how do you design the interaction between a developer and an AI agent when the developer has fundamentally different preferences about how much control they want?
+          </p>
+
+          <p>
+            Some developers want to review every line the agent produces before it lands in the codebase. Others want the agent to operate autonomously and only surface work for approval at the end. Most are somewhere in between, and their preference varies by task — they might want full control over API documentation but be happy to fully delegate comment generation.
+          </p>
+
+          <blockquote>
+            The interaction model I designed: a call-and-response framework that adapted to individual developer preferences — from step-by-step co-creation to full artifact review, with every point on the spectrum explicitly supported.
+          </blockquote>
+
+          <h2>The Interaction Model</h2>
+
+          <p>
+            The model had two poles and a continuous spectrum between them:
+          </p>
+
+          <ul>
+            <li><strong>Co-creation mode</strong> — the agent surfaces a proposal at each step, waits for developer input, and incorporates feedback before proceeding. High control, high engagement, appropriate for high-stakes documentation.</li>
+            <li><strong>Artifact review mode</strong> — the agent works autonomously and surfaces the complete output for a single review-and-approve interaction. Low friction, appropriate for routine maintenance tasks.</li>
+          </ul>
+
+          <p>
+            Between these, the framework supported any combination: agents could be set to interrupt at specific decision points, surface confidence scores that triggered manual review when below a threshold, or operate in background and batch their outputs for periodic review.
+          </p>
+
+          <p>
+            The key design principle: the developer should never be surprised by what the agent did. Every autonomous action should be legible in retrospect, and every agent decision point should be explicit rather than hidden.
+          </p>
+
+          <h2>The IDE Integration</h2>
+
+          <p>
+            The primary surface was Google's Cider IDE — the internal development environment used by the majority of Google engineers. LemonADE agents surfaced inside Cider via the Cider Agent framework, alongside Google Coder and Jetski.
+          </p>
+
+          <p>
+            I designed the agent interaction patterns for the IDE context specifically — where the developer is heads-down in code, interruptions are costly, and the visual real estate for agent communication is extremely limited. The same call-and-response framework had to work in a sidebar panel without disrupting the primary coding workflow.
+          </p>
+
+        </div>
+
+        <div class="image-grid">
+          <div class="image-grid__item">
+            <img src="/assets/images/lemonade/cider.jpg"
+                 alt="LemonADE — Cider IDE agent interaction"
+                 loading="lazy"
+                 onerror="this.parentElement.style.background='var(--bg-overlay)'">
+          </div>
+          <div class="image-grid__item">
+            <img src="/assets/images/lemonade/coauthor.jpg"
+                 alt="LemonADE — document co-authoring interface"
+                 loading="lazy"
+                 onerror="this.parentElement.style.background='var(--bg-overlay)'">
+          </div>
+        </div>
+
+        <div class="prose">
+
+          <h2>Platform Adoption</h2>
+
+          <p>
+            I designed and personally shipped the internal LemonADE documentation site. The prompt and tool architecture I developed was subsequently incorporated into multiple Google AI support libraries — a signal of platform-level adoption that typically indicates a design pattern has proven durable enough to generalize.
+          </p>
+
+          <h2>Why This Was the Bridge to Act 3</h2>
+
+          <p>
+            LemonADE was where I moved from designing systems that help humans understand AI, to designing systems that are themselves autonomous agents operating in production environments. That's a categorical shift — not just in technical complexity, but in the design responsibility.
+          </p>
+
+          <p>
+            When an AI agent generates documentation that gets committed to a codebase used by thousands of engineers, the designer is responsible for whether the output is trustworthy, legible, and correctable. The same question I've been asking since a Boeing flight deck in 2009 — when the system fails, can the human take back control? — becomes acutely relevant when the system is operating without human intervention in a production engineering environment.
+          </p>
+
+        </div>
+
+        <a href="/cases/prompt-city/" class="next-project">
+          <div>
+            <p class="next-project__label">Next</p>
+            <p class="next-project__title">Prompt City →</p>
+          </div>
+          <span class="next-project__arrow" aria-hidden="true">→</span>
+        </a>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <p class="footer__name">Dan Ostrowski</p>
+          <p class="footer__title">UX Leader · Strategist · Innovator</p>
+          <p class="footer__location">Seattle, WA</p>
+        </div>
+        <nav class="footer__links" aria-label="Footer navigation">
+          <a href="https://www.linkedin.com/in/danostrowski" class="footer__link" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:dan@danostrowski.com" class="footer__link">Email</a>
+        </nav>
+        <p class="footer__copy">© 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/nav.js"></script>
+
+</body>
+</html>

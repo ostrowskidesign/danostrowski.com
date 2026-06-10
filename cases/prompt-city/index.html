@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prompt City — Dan Ostrowski</title>
+  <meta name="description" content="Google-wide prompt literacy platform. Full visual design system delivered in one month as sole designer.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/case.css">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+</head>
+
+<body class="case-body">
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav__logo">Dan Ostrowski</a>
+    <ul class="nav__links" role="list">
+      <li><a href="/hello/" class="nav__link">Hello</a></li>
+      <li><a href="/work/" class="nav__link">Work</a></li>
+    </ul>
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav__overlay" role="dialog" aria-modal="true">
+    <a href="/hello/" class="nav__link">Hello</a>
+    <a href="/work/" class="nav__link">Work</a>
+  </div>
+
+  <!-- ── Password Gate ─────────────────────────────────────── -->
+  <div id="password-gate" class="password-gate">
+    <div class="password-gate__inner">
+      <svg class="password-gate__lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <rect x="5" y="11" width="14" height="11" rx="2"/>
+        <path d="M8 11V7a4 4 0 018 0v4"/>
+      </svg>
+      <h1 class="password-gate__title">Prompt City</h1>
+      <p class="password-gate__subtitle">
+        Google-wide prompt literacy platform.<br>
+        This case study is password protected.
+      </p>
+      <form id="password-form" class="password-gate__form" novalidate>
+        <input
+          id="password-input"
+          type="password"
+          class="password-gate__input"
+          placeholder="Enter password"
+          autocomplete="current-password"
+          autofocus
+        >
+        <button id="password-submit" type="submit" class="password-gate__submit">
+          View Case Study
+        </button>
+        <p id="password-error" class="password-gate__error" aria-live="polite"></p>
+      </form>
+      <p class="password-gate__request">
+        Don't have the password?
+        <a href="https://www.linkedin.com/in/danostrowski" target="_blank" rel="noopener">Request access via LinkedIn</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- ── Protected Content ─────────────────────────────────── -->
+  <div id="case-content" hidden>
+
+    <div class="case-hero-wrap case-hero-wrap--placeholder">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+        <rect x="3" y="3" width="18" height="18" rx="2"/>
+        <path d="M8 12h8M8 8h8M8 16h4"/>
+      </svg>
+    </div>
+
+    <main>
+      <div class="container case-content-wrap">
+        <div class="case-main">
+
+          <header class="case-header">
+            <div class="case-header__eyebrow">
+              <span class="act-tag act-tag--3">Act 3 · AI Systems</span>
+              <span class="label">Sole Designer</span>
+              <span class="label">Nov 2025 – Jan 2026</span>
+            </div>
+            <h1 class="case-header__title">Prompt City</h1>
+            <p class="case-header__hook">
+              A Google-wide prompt library that I reframed from a sharing tool into a literacy and governance platform — full visual design system and UX architecture delivered in one month as sole designer.
+            </p>
+          </header>
+
+          <div class="prose">
+
+            <p>
+              Prompt City started as an internal prompt library — a place where Google engineers and Cloud teams could share and discover prompts for common tasks. When I joined, the core concept was sound but the product framing was wrong. A sharing tool optimizes for discoverability. A literacy platform optimizes for understanding. Those are different products.
+            </p>
+
+            <p>
+              I reframed Prompt City as a prompt literacy and governance platform: not just where you find prompts, but where you understand why they work, how to improve them, and how to reason about prompt quality before you deploy.
+            </p>
+
+            <h2>The Five-Component Anatomy</h2>
+
+            <p>
+              The foundation of the redesign was a semantic component system — a framework that decomposed any prompt into five distinct dimensions:
+            </p>
+
+            <ul>
+              <li><strong>Role Priming</strong> — establishing the model's persona, expertise level, and perspective</li>
+              <li><strong>Instruction</strong> — the explicit task or request</li>
+              <li><strong>Conversation Flow</strong> — how the model should handle multi-turn dialogue, clarifying questions, and follow-ups</li>
+              <li><strong>Context & Background</strong> — the situational information the model needs to respond appropriately</li>
+              <li><strong>Output Format</strong> — the structure, length, and format of the desired response</li>
+            </ul>
+
+            <p>
+              Every prompt in the system was annotated against these five dimensions. Users could see at a glance which components a prompt used, how heavily each was weighted, and what would happen to the output if any component was weakened or removed.
+            </p>
+
+            <h2>Interactive Attribute Tuners</h2>
+
+            <p>
+              The most original interaction design in the system: real-time Attribute Tuners that allowed users to adjust prompt components along semantic spectra and see the output change live.
+            </p>
+
+            <p>
+              Each tuner controlled a specific dimension of prompt behavior:
+            </p>
+
+            <ul>
+              <li><strong>Detail Level</strong>: Broad → Specific → Atomic</li>
+              <li><strong>Rigidity</strong>: Flexible → Structured → Strict</li>
+              <li><strong>Tone</strong>: Casual → Professional → Formal</li>
+              <li><strong>Verbosity</strong>: Concise → Standard → Comprehensive</li>
+            </ul>
+
+            <p>
+              As users adjusted a tuner, two things happened simultaneously: the prompt text rewrote itself to reflect the new setting, and a justification note explained what changed and why. Users weren't just getting a different prompt — they were learning why the change produced a different output.
+            </p>
+
+            <p>
+              This was the core literacy mechanism: the system taught prompt engineering principles through direct manipulation rather than documentation.
+            </p>
+
+            <h2>Prompt Strength Score</h2>
+
+            <p>
+              I designed a weighted composite metric — the Prompt Strength Score — that evaluated prompt quality across the five component dimensions:
+            </p>
+
+            <ul>
+              <li>Role Priming: 30%</li>
+              <li>Instructions: 30%</li>
+              <li>Context Depth: 20%</li>
+              <li>Output Formatting: 20%</li>
+            </ul>
+
+            <p>
+              The score was accompanied by auto-suggestions for improvement, an estimated turn count (how many back-and-forth exchanges the prompt would require before producing usable output), and auto-tagging that categorized the prompt by use case, model compatibility, and task type.
+            </p>
+
+            <h2>The Guided Builder</h2>
+
+            <p>
+              For users new to prompt engineering, I designed a Guided Builder — a structured creation flow that walked users through each of the five components in sequence, with examples and scaffolding at each step. Users could start from scratch or from a template, and the builder would flag missing components and suggest additions before the prompt was published.
+            </p>
+
+            <h2>Conversation Quality Index</h2>
+
+            <p>
+              The open question in prompt evaluation: how do you predict the quality of a conversation before it happens? I developed the Conversation Quality Index (CQI) — a predictive metric built on three dimensions:
+            </p>
+
+            <ul>
+              <li><strong>Structural completeness</strong> — are all five components present and appropriately weighted?</li>
+              <li><strong>Specificity gradient</strong> — does each component add unique constraint, or do components overlap?</li>
+              <li><strong>Ambiguity surface area</strong> — how many valid interpretations does the prompt admit?</li>
+            </ul>
+
+            <p>
+              CQI above 0.78 predicted first-pass acceptance above 85% in Prompt City pilot data. The metric became the foundation for auto-suggestions and the governance layer that flagged low-quality prompts before they were published to the shared library.
+            </p>
+
+            <h2>Delivery</h2>
+
+            <p>
+              Sole designer on a four-person part-time engineering team. Full visual design system and UX architecture delivered within one month of joining the project. The system's prompt and component architecture was subsequently incorporated into multiple Google AI support libraries.
+            </p>
+
+          </div>
+
+          <a href="/cases/mendel/" class="next-project">
+            <div>
+              <p class="next-project__label">Next</p>
+              <p class="next-project__title">Mendel Traffic →</p>
+            </div>
+            <span class="next-project__arrow" aria-hidden="true">→</span>
+          </a>
+
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div>
+            <p class="footer__name">Dan Ostrowski</p>
+            <p class="footer__title">UX Leader · Strategist · Innovator</p>
+            <p class="footer__location">Seattle, WA</p>
+          </div>
+          <nav class="footer__links" aria-label="Footer navigation">
+            <a href="https://www.linkedin.com/in/danostrowski" class="footer__link" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="mailto:dan@danostrowski.com" class="footer__link">Email</a>
+          </nav>
+          <p class="footer__copy">© 2026</p>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- end case-content -->
+
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/password.js"></script>
+
+</body>
+</html>
