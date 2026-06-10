@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EdKit — Dan Ostrowski</title>
+  <meta name="description" content="A toolkit that democratized learning design at Google. Zero mandates. Hundreds of creators. Thousands of deployed instances.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/case.css">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+</head>
+
+<body class="case-body">
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav__logo">Dan Ostrowski</a>
+    <ul class="nav__links" role="list">
+      <li><a href="/hello/" class="nav__link">Hello</a></li>
+      <li><a href="/work/" class="nav__link">Work</a></li>
+    </ul>
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav__overlay" role="dialog" aria-modal="true">
+    <a href="/hello/" class="nav__link">Hello</a>
+    <a href="/work/" class="nav__link">Work</a>
+  </div>
+
+  <div class="case-hero-wrap">
+    <img
+      src="/assets/images/edkit/hero.jpg"
+      alt="EdKit Activity Creator interface"
+      onerror="this.parentElement.classList.add('case-hero-wrap--placeholder'); this.outerHTML='<svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/></svg>'"
+    >
+  </div>
+
+  <main>
+    <div class="container case-content-wrap">
+      <div class="case-main">
+
+        <header class="case-header">
+          <div class="case-header__eyebrow">
+            <span class="act-tag act-tag--2">Act 2 · Knowledge Systems</span>
+            <span class="label">Co-Founder & UX Lead</span>
+            <span class="label">2019 – 2023</span>
+          </div>
+          <h1 class="case-header__title">EdKit</h1>
+          <p class="case-header__hook">
+            Zero mandates. Hundreds of creators. Thousands of deployed instances. The strongest evidence in this portfolio that design can change organizational behavior without requiring organizational authority.
+          </p>
+        </header>
+
+        <div class="prose">
+
+          <p>
+            EdKit began as a side effect of the Intuitive ML course — a Google-internal machine learning curriculum I was helping design. We kept running into the same problem: static slide decks and long-form documents were the only tools available to content creators, and they were terrible at teaching people things. They couldn't adapt. They couldn't respond. They couldn't tell us what was working.
+          </p>
+
+          <p>
+            The question was whether we could build something better — not just for our team, but for every content creator at Google. The answer became EdKit.
+          </p>
+
+          <h2>The Problem with Static Content</h2>
+
+          <p>
+            Google produced enormous volumes of internal educational content — onboarding programs, technical courses, policy training, skill development. Most of it was consumed passively. A learner read a document or watched a video. There was no feedback loop. Authors couldn't tell whether their content worked. Learners couldn't signal where they were confused. The system optimized for production, not learning.
+          </p>
+
+          <p>
+            Building interactive learning experiences required developer involvement. A PM or program manager who wanted to create a quiz, a branching scenario, or a drag-and-drop exercise had to file a ticket and wait. Most didn't bother.
+          </p>
+
+          <h2>What We Built</h2>
+
+          <p>
+            EdKit was a toolkit for building embeddable, interactive learning experiences — with no engineering dependency. Content creators could build quizzes, flip cards, drag-and-drop exercises, branching scenarios, and choose-your-own-path learning flows through a visual interface, then embed the result anywhere Google hosted content.
+          </p>
+
+          <p>
+            The core components:
+          </p>
+
+          <ul>
+            <li><strong>Activity Creator</strong> — a visual builder for interactive learning modules. Drag and configure; no code required. Supported a growing library of activity types that content creators could chain together.</li>
+            <li><strong>Learning Path Engine</strong> — a sequencing system that let authors chain multiple activities into choose-your-own-adventure style paths. Learners could be routed to different content based on their responses, prior knowledge, or stated preferences.</li>
+            <li><strong>Analytics Layer</strong> — every interaction was tracked and surfaced back to the author. Which questions stumped people. Where learners dropped off. Which paths were chosen most often. Authors could iterate on content informed by actual behavior, not assumptions.</li>
+            <li><strong>Skills Stack Integration</strong> — EdKit activities could be tagged to Google's internal skills graph, connecting learning completions to organizational capability tracking.</li>
+          </ul>
+
+          <h2>Zero Mandates</h2>
+
+          <p>
+            EdKit spread entirely through organic adoption. We never mandated its use. We never sent a company-wide announcement. We built something that solved a real problem better than the existing alternative, made it easy to find and use, and then stayed close to early adopters to improve it quickly.
+          </p>
+
+          <p>
+            The result: hundreds of content creators across every major Product Area at Google, thousands of deployed instances, embedded in internal sites across the organization. Product teams used it for feature rollout training. HR used it for onboarding. Legal used it for compliance training. None of them were our intended audience — they found EdKit because it worked.
+          </p>
+
+          <blockquote>
+            The most powerful design lever isn't mandate or marketing — it's making the right thing the easy thing. When we did that, adoption followed on its own.
+          </blockquote>
+
+          <h2>What It Required</h2>
+
+          <p>
+            Co-founding EdKit meant doing design work that most UX roles don't ask for. Product strategy. Infrastructure decisions. Author support. Community building. I was designing the tool, the system around the tool, and the conditions for the tool's survival simultaneously.
+          </p>
+
+          <p>
+            The component architecture decisions we made in 2019 were still holding up in 2023. The analytics model we designed early became the basis for how EngEDU measured learning effectiveness across all of its programs. EdKit was never a feature — it was infrastructure.
+          </p>
+
+        </div>
+
+        <div class="image-grid">
+          <div class="image-grid__item">
+            <img src="/assets/images/edkit/carousel.jpg"
+                 alt="EdKit carousel activity type — Gettysburg example"
+                 loading="lazy"
+                 onerror="this.parentElement.style.background='var(--bg-overlay)'">
+          </div>
+          <div class="image-grid__item">
+            <img src="/assets/images/edkit/skills.jpg"
+                 alt="EdKit Skills Stack component"
+                 loading="lazy"
+                 onerror="this.parentElement.style.background='var(--bg-overlay)'">
+          </div>
+        </div>
+
+        <div class="prose">
+
+          <h2>The Thread to Act 3</h2>
+
+          <p>
+            EdKit was the first time I designed a system that was explicitly about embedding expertise into a tool so that the tool could do the expert's job without the expert being present. A content creator building an EdKit learning path wasn't just building content — they were encoding their pedagogical knowledge into a system that would apply it consistently across thousands of learner interactions.
+          </p>
+
+          <p>
+            That's the same problem as LemonADE, where AI agents encode engineering documentation expertise and apply it continuously across the SDLC. The same problem as Prompt City, where prompt anatomy frameworks encode prompt engineering expertise and surface it to users who don't have it. The domain is different. The design challenge is identical.
+          </p>
+
+        </div>
+
+        <a href="/cases/pair-guidebook/" class="next-project">
+          <div>
+            <p class="next-project__label">Next</p>
+            <p class="next-project__title">People + AI Guidebook →</p>
+          </div>
+          <span class="next-project__arrow" aria-hidden="true">→</span>
+        </a>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <p class="footer__name">Dan Ostrowski</p>
+          <p class="footer__title">UX Leader · Strategist · Innovator</p>
+          <p class="footer__location">Seattle, WA</p>
+        </div>
+        <nav class="footer__links" aria-label="Footer navigation">
+          <a href="https://www.linkedin.com/in/danostrowski" class="footer__link" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:dan@danostrowski.com" class="footer__link">Email</a>
+        </nav>
+        <p class="footer__copy">© 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/nav.js"></script>
+
+</body>
+</html>

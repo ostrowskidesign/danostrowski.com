@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>People + AI Guidebook — Dan Ostrowski</title>
+  <meta name="description" content="Defining the rules before the game was played. Co-led the Errors & Failures section and introduced Air France 447 as a UX case study for conflicting signal hierarchies.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/case.css">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+</head>
+
+<body class="case-body">
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav__logo">Dan Ostrowski</a>
+    <ul class="nav__links" role="list">
+      <li><a href="/hello/" class="nav__link">Hello</a></li>
+      <li><a href="/work/" class="nav__link">Work</a></li>
+    </ul>
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav__overlay" role="dialog" aria-modal="true">
+    <a href="/hello/" class="nav__link">Hello</a>
+    <a href="/work/" class="nav__link">Work</a>
+  </div>
+
+  <div class="case-hero-wrap">
+    <img
+      src="/assets/images/pair/hero.jpg"
+      alt="People + AI Guidebook — pair.withgoogle.com"
+      onerror="this.parentElement.classList.add('case-hero-wrap--placeholder'); this.outerHTML='<svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/></svg>'"
+    >
+  </div>
+
+  <main>
+    <div class="container case-content-wrap">
+      <div class="case-main">
+
+        <header class="case-header">
+          <div class="case-header__eyebrow">
+            <span class="act-tag act-tag--2">Act 2 · Knowledge Systems</span>
+            <span class="label">Contributor · Errors & Failures</span>
+            <span class="label">2019</span>
+          </div>
+          <h1 class="case-header__title">People + AI Guidebook</h1>
+          <p class="case-header__hook">
+            I didn't just co-lead the Errors and Failures section. I introduced a new framing for the field — one drawn not from software design, but from aviation disaster.
+          </p>
+        </header>
+
+        <div class="prose">
+
+          <p>
+            The People + AI Guidebook — published by Google's PAIR (People + AI Research) team and available publicly at <a href="https://pair.withgoogle.com" target="_blank" rel="noopener">pair.withgoogle.com</a> — was one of the first comprehensive references for human-centered AI design. It defined patterns for how AI systems should communicate uncertainty, handle errors, set user expectations, and recover from failures.
+          </p>
+
+          <p>
+            I contributed to the Errors and Failures section — the part of the Guidebook that addressed what happens when AI systems go wrong.
+          </p>
+
+          <h2>The Contribution</h2>
+
+          <p>
+            The conventional framing of AI errors in 2019 was largely borrowed from software UX: show an error message, offer a retry, provide a fallback. That framing assumed discrete, recognizable failure states — the system either worked or it didn't.
+          </p>
+
+          <p>
+            I brought a different frame: aviation disaster analysis. Specifically, Air France Flight 447 — the 2009 crash caused not by a single system failure but by a cascade of conflicting signals that collapsed the crew's ability to form a coherent mental model of what the aircraft was doing.
+          </p>
+
+          <p>
+            The flight's autopilot had disconnected due to iced pitot tubes. In the 4 minutes and 24 seconds before impact, the crew received contradictory readings from multiple instruments, conflicting aural warnings, and an unreliable airspeed indication. They were not incompetent. They were operating in a system that had been designed without accounting for the cognitive cost of conflicting signals at the moment of maximum stress.
+          </p>
+
+          <blockquote>
+            The most dangerous AI failure isn't the system going down. It's the system giving two answers that can't both be right — and leaving the human to figure out which one to trust.
+          </blockquote>
+
+          <h2>The Interaction Pattern</h2>
+
+          <p>
+            The pattern I authored for the Guidebook: <strong>conflicting signal hierarchies</strong>.
+          </p>
+
+          <p>
+            When an AI system receives inputs that generate contradictory outputs — or when the system's confidence in its own output falls below a threshold — the design response should not be to silently resolve the conflict and present a single answer. It should be to surface the disagreement explicitly, label the sources of conflict, and give the human the information they need to reconstruct their mental model quickly.
+          </p>
+
+          <p>
+            This pattern has three components:
+          </p>
+
+          <ul>
+            <li><strong>Signal visibility</strong> — show the competing signals, not just the resolved output. The human should know what the system is weighing.</li>
+            <li><strong>Confidence calibration</strong> — when system confidence is low, communicate that directly. Don't present uncertain outputs with the same visual weight as certain ones.</li>
+            <li><strong>Mental model support</strong> — give the human enough context to form their own hypothesis. The goal isn't to offload decision-making — it's to ensure the human can take back control when the system can't be trusted.</li>
+          </ul>
+
+          <h2>Why It Mattered Then and Now</h2>
+
+          <p>
+            In 2019, this pattern was forward-looking. Most AI products didn't yet face the complexity of genuinely conflicting signal hierarchies — the models weren't capable enough to generate convincingly wrong answers, and the stakes were low enough that the failure modes didn't matter much.
+          </p>
+
+          <p>
+            In 2026, with agentic AI systems operating in production code, financial systems, and medical contexts, this pattern is urgent. An autonomous agent that silently resolves a conflict in its context window and proceeds without surfacing that conflict to the human is an Air France 447 waiting to happen.
+          </p>
+
+          <p>
+            The pattern I authored in 2019 became a design requirement I applied directly in Mendel Traffic in 2026 — where the question of when an AI experiment agent should surface disagreement to the engineer versus silently resolve it is exactly the design problem at the center of the work.
+          </p>
+
+          <h2>The Guidebook</h2>
+
+          <p>
+            The People + AI Guidebook was referenced by product teams across Google during AI integration reviews and became one of the field's most-cited references for responsible AI UX. It's available publicly and remains relevant.
+          </p>
+
+          <p>
+            <a href="https://pair.withgoogle.com" target="_blank" rel="noopener">pair.withgoogle.com →</a>
+          </p>
+
+        </div>
+
+        <div class="image-grid image-grid--single">
+          <div class="image-grid__item" style="aspect-ratio: 16/9;">
+            <img src="/assets/images/pair/hero.jpg"
+                 alt="People + AI Guidebook — Errors and Failures section"
+                 loading="lazy"
+                 onerror="this.parentElement.style.background='var(--bg-overlay)'">
+          </div>
+        </div>
+
+        <a href="/cases/gemini-tl/" class="next-project">
+          <div>
+            <p class="next-project__label">Next</p>
+            <p class="next-project__title">Gemini TL →</p>
+          </div>
+          <span class="next-project__arrow" aria-hidden="true">→</span>
+        </a>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <p class="footer__name">Dan Ostrowski</p>
+          <p class="footer__title">UX Leader · Strategist · Innovator</p>
+          <p class="footer__location">Seattle, WA</p>
+        </div>
+        <nav class="footer__links" aria-label="Footer navigation">
+          <a href="https://pair.withgoogle.com" class="footer__link" target="_blank" rel="noopener">PAIR Guidebook ↗</a>
+          <a href="https://www.linkedin.com/in/danostrowski" class="footer__link" target="_blank" rel="noopener">LinkedIn</a>
+        </nav>
+        <p class="footer__copy">© 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/nav.js"></script>
+
+</body>
+</html>
